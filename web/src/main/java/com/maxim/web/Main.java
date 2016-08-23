@@ -6,6 +6,8 @@ import com.maxim.model.Registry;
  */
 public class Main {
     public static void main(String[] args){
+
         Registry registry=new Registry();
+        System.out.println();
     }
 }
