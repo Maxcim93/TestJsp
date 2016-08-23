@@ -11,6 +11,5 @@ public class App
         Registry registry =new Registry();
         registry.addDoctor(new Doctor("doctor#1",Doctor.Specialization.OCULIST));
         registry.writeToAcceptPatient(new Patient("patient#1"),Doctor.Specialization.OCULIST);
-
     }
 }

@@ -10,13 +10,13 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>JavaServlet</servlet-name>
-    <servlet-class>com.maxim.web.JavaServlet</servlet-class>
+    <servlet-name>ScheduleViewServlet</servlet-name>
+    <servlet-class>com.maxim.web.ScheduleViewServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>JavaServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <servlet-name>ScheduleViewServlet</servlet-name>
+    <url-pattern>/clinic/schedule</url-pattern>
   </servlet-mapping>
 
 </web-app>
