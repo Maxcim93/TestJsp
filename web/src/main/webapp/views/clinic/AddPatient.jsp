@@ -3,20 +3,21 @@
 
 <html>
     <head>
-        <title>Добавить нового доктора</title>
+        <title>Записать пациента на прием</title>
     </head>
     <body>
-        <form action="${pageContext.servletContext.contextPath}/clinic/doctor" method="POST">
+        <form action="${pageContext.servletContext.contextPath}/clinic/patient" method="POST">
             <table>
-                    <caption>Добавить нового доктора</caption>
+                    <caption>Записать пациента на прием</caption>
             		<tr>
             			<td align="right" >Name : </td>
             			<td>
             				<input type="text" name="name">
             			</td>
             		</tr>
+
             		<tr>
-            			<td align="right" >Specialization : </td>
+            			<td align="right" >Doctors specialization : </td>
             			<td>
             				<input type="text" name="specialization">
             			</td>

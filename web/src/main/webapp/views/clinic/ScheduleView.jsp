@@ -8,7 +8,7 @@
         <title>Расписание приемов клиники</title>
     </head>
     <body>
-        <table>
+        <table border="1">
             <caption>Расписание приемов клиники</caption>
             <tr>
                 <th>Имя доктора</th>
@@ -21,12 +21,21 @@
                 out.println("<tr>");
                 out.println("<td>"+ doctor.getKey().getName()+"</td>");
                 out.println("<td>"+ doctor.getKey().getSpecialization()+"</td>");
-                out.println("<td>"+""+"</td>");
+
+                out.println("<td>");
+                for(Patient patient:doctor.getValue()){
+                    out.println("<p>");
+                    out.println(patient.getName());
+                    out.println("</p>");
+                }
+                out.println("</td>");
+
                 out.println("</tr>");
             }%>
         </table>
         <p>
             <a href= "${pageContext.servletContext.contextPath}/views/clinic/AddUser.jsp">Добавить доктора</a>
+            <a href= "${pageContext.servletContext.contextPath}/views/clinic/AddPatient.jsp">Записать пациента на прием</a>
         </p>
     </body>
 </html>

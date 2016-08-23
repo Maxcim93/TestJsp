@@ -19,6 +19,11 @@
     <servlet-class>com.maxim.web.AddDoctorServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>AddPatientServlet</servlet-name>
+    <servlet-class>com.maxim.web.AddPatientServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>ScheduleViewServlet</servlet-name>
     <url-pattern>/clinic/schedule</url-pattern>
@@ -27,6 +32,11 @@
   <servlet-mapping>
     <servlet-name>AddDoctorServlet</servlet-name>
     <url-pattern>/clinic/doctor</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddPatientServlet</servlet-name>
+    <url-pattern>/clinic/patient</url-pattern>
   </servlet-mapping>
 
 </web-app>

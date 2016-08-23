@@ -15,12 +15,6 @@ import java.io.IOException;
  */
 public class AddDoctorServlet extends HttpServlet{
         private final Registry registry = Registry.getInstance();
-        @Override
-        protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-                throws ServletException, IOException {
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/views/clinic/AddUser.jsp");
-            dispatcher.forward(req, resp);
-        }
 
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
