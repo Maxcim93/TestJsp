@@ -14,9 +14,19 @@
     <servlet-class>com.maxim.web.ScheduleViewServlet</servlet-class>
   </servlet>
 
+  <servlet>
+    <servlet-name>AddDoctorServlet</servlet-name>
+    <servlet-class>com.maxim.web.AddDoctorServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>ScheduleViewServlet</servlet-name>
     <url-pattern>/clinic/schedule</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddDoctorServlet</servlet-name>
+    <url-pattern>/clinic/doctor</url-pattern>
   </servlet-mapping>
 
 </web-app>

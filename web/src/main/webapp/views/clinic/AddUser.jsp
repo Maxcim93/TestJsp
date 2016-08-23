@@ -6,7 +6,24 @@
         <title>Добавить нового доктора</title>
     </head>
     <body>
-        <form action="${pageContext.servletContext.contextPath}/user/create" method="POST">
+        <form action=request.getContextPath()+"/clinic/doctor" method="POST">
+            <table>
+            		<tr>
+            			<td align="right" >Name : </td>
+            			<td>
+            				<input type="text" name="name">
+            			</td>
+            		</tr>
+            		<tr>
+            			<td align="right" >Specialization : </td>
+            			<td>
+            				<input type="text" name="specialization">
+            			</td>
+            		</tr>
+            		<tr>
+            			<td><input type="submit" align="center" value="Submit"/></td>
+            		</tr>
+            	</table>
         </form>
     </body>
 </html>
