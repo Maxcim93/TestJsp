@@ -1,0 +1,1 @@
+It's project create for build first application of JSP.
