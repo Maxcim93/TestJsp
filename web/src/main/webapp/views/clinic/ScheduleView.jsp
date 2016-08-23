@@ -15,23 +15,20 @@
                 <th>Специализация</th>
                 <th>Имена пациентов</th>
             </tr>
-            <%
-                Map<Doctor,LinkedList<Patient>> schedule=(Map<Doctor,LinkedList<Patient>>)request.getAttribute("schedule");
-                for(Map.Entry<Doctor,LinkedList<Patient>> doctor:schedule.entrySet()){
-                out.println("<tr>");
-                out.println("<td>"+ doctor.getKey().getName()+"</td>");
-                out.println("<td>"+ doctor.getKey().getSpecialization()+"</td>");
 
-                out.println("<td>");
-                for(Patient patient:doctor.getValue()){
-                    out.println("<p>");
-                    out.println(patient.getName());
-                    out.println("</p>");
-                }
-                out.println("</td>");
+            <c:forEach items="${schedule}" var="doctor" varStatus="status">
+                <tr>
+                    <td> ${doctor.getKey().getName()}</td>
+                    <td>${doctor.getKey().getSpecialization()}</td>
+                    <td>
+                            <c:set var="patients" value="${doctor.getValue()}"/>
+                            <c:forEach items="${patients}" var="patient" varStatus="status">
+                                <p>${patient.getName()}</p>
+                            </c:forEach>
+                    </td>
+                </tr>
+            </c:forEach>
 
-                out.println("</tr>");
-            }%>
         </table>
         <p>
             <a href= "${pageContext.servletContext.contextPath}/views/clinic/AddUser.jsp">Добавить доктора</a>
