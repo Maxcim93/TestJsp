@@ -15,7 +15,7 @@ public class ScheduleViewServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.setAttribute("schedule", this.registry.getSchedule());
+        req.setAttribute("schedule", this.registry.getSchedule().entrySet());
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/clinic/ScheduleView.jsp");
         dispatcher.forward(req, resp);
     }
